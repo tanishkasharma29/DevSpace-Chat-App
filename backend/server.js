@@ -14,7 +14,11 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://devspace-chatapp.netlify.app/",
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   },

@@ -15,6 +15,7 @@ A modern real-time chat application built specifically for developers and tech t
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - React 18
 - Vite
 - Chakra UI
@@ -23,6 +24,7 @@ A modern real-time chat application built specifically for developers and tech t
 - Axios
 
 ### Backend
+
 - Node.js
 - Express.js
 - Socket.IO
@@ -43,6 +45,7 @@ DevSpace-Chat-App/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - MongoDB (local or Atlas)
 - npm or yarn
@@ -50,18 +53,21 @@ DevSpace-Chat-App/
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/tanishkasharma29/DevSpace-Chat-App.git
    cd DevSpace-Chat-App
    ```
 
 2. **Setup Backend**
+
    ```bash
    cd backend
    npm install
    ```
-   
+
    Create a `.env` file in the backend directory:
+
    ```env
    MONGO_URL=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
@@ -77,10 +83,12 @@ DevSpace-Chat-App/
 ### Running the Application
 
 1. **Start the Backend Server**
+
    ```bash
    cd backend
    npm start
    ```
+
    Server will run on `http://localhost:5000`
 
 2. **Start the Frontend Development Server**
@@ -119,6 +127,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Tanishka Sharma**
+
 - GitHub: [@tanishkasharma29](https://github.com/tanishkasharma29)
 - LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
 
@@ -128,4 +137,4 @@ Give a ⭐️ if this project helped you!
 
 ---
 
-**DevSpace** - *Connecting Developers, One Chat at a Time* 🚀
+**DevSpace** - _Connecting Developers, One Chat at a Time_ 🚀
