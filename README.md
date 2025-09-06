@@ -129,7 +129,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Tanishka Sharma**
 
 - GitHub: [@tanishkasharma29](https://github.com/tanishkasharma29)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/tanishka-sharma-a5a883257/)
+- LinkedIn: [Tanishka Sharma](https://www.linkedin.com/in/tanishka-sharma-a5a883257/)
 
 ## ⭐ Show your support
 
@@ -138,4 +138,5 @@ Give a ⭐️ if this project helped you!
 ---
 
 **DevSpace** - _Connecting Developers, One Chat at a Time_ 🚀
+
 
