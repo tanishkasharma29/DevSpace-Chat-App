@@ -1,5 +1,6 @@
 const express = require("express");
 const User = require("../models/UserModel");
+const { protect } = require("../middleware/authMiddleware");
 const userRouter = express.Router();
 const jwt = require("jsonwebtoken");
 
@@ -48,6 +49,16 @@ userRouter.post("/login", async (req, res) => {
     } else {
       res.status(401).json({ message: "Invalid email or password" });
     }
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+//Get all users
+userRouter.get("/", protect, async (req, res) => {
+  try {
+    const users = await User.find({}).select("-password");
+    res.json(users);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }

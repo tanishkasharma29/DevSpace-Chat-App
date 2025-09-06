@@ -25,6 +25,7 @@ const ChatArea = ({ selectedGroup, socket, setSelectedGroup }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
   const [connectedUsers, setConnectedUsers] = useState([]);
+  const [allUsers, setAllUsers] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const [typingUsers, setTypingUsers] = useState(new Set());
   const messagesEndRef = useRef(null);
@@ -50,12 +51,31 @@ const ChatArea = ({ selectedGroup, socket, setSelectedGroup }) => {
     }
   }, [selectedGroup?._id]);
 
+  //fetch all users
+  const fetchAllUsers = useCallback(async () => {
+    const currentUser = JSON.parse(localStorage.getItem("userInfo") || {});
+    const token = currentUser?.token;
+    try {
+      const { data } = await axios.get(`${apiURL}/api/users`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setAllUsers(data);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Fetch all users when component mounts
+    fetchAllUsers();
+  }, [fetchAllUsers]);
+
   useEffect(() => {
     if (selectedGroup && socket) {
       //fetch messages
       fetchMessages();
       socket.emit("join room", selectedGroup?._id);
-      socket.on("message receive", (newMessage) => {
+      socket.on("message received", (newMessage) => {
         setMessages((prev) => [...prev, newMessage]);
       });
 
@@ -465,7 +485,9 @@ const ChatArea = ({ selectedGroup, socket, setSelectedGroup }) => {
         flexShrink={0}
         display={{ base: "none", lg: "block" }}
       >
-        {selectedGroup && <UsersList users={connectedUsers} />}
+        {selectedGroup && (
+          <UsersList users={allUsers} connectedUsers={connectedUsers} />
+        )}
       </Box>
     </Flex>
   );
