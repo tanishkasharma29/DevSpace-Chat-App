@@ -17,7 +17,7 @@ const io = socketio(server, {
     origin: [
       "http://localhost:5173",
       "http://localhost:3000",
-      "https://devspace-chatapp.netlify.app/",
+      "https://devspace-chatapp.netlify.app",
     ],
     methods: ["GET", "POST"],
     credentials: true,
