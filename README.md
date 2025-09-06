@@ -2,6 +2,11 @@
 
 A modern real-time chat application built specifically for developers and tech teams. DevSpace provides seamless group communication with advanced features like typing indicators, online presence, and responsive design.
 
+## 🌐 Live Demo
+
+- **Frontend**: [DevSpace Chat App](https://devspace-chatapp.netlify.app/)
+- **Backend API**: [DevSpace API](https://devspace-backend-h8m0.onrender.com)
+
 ## 🚀 Features
 
 - **Real-time Messaging**: Instant messaging with Socket.IO
@@ -98,11 +103,6 @@ DevSpace-Chat-App/
    ```
    Application will run on `http://localhost:5173`
 
-## 🌐 Live Demo
-
-- **Frontend**: [DevSpace Chat App](https://your-deployed-frontend-url.com)
-- **Backend API**: [DevSpace API](https://your-deployed-backend-url.com)
-
 ## 📝 API Endpoints
 
 - `POST /api/users/register` - User registration
@@ -129,7 +129,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Tanishka Sharma**
 
 - GitHub: [@tanishkasharma29](https://github.com/tanishkasharma29)
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/tanishka-sharma-a5a883257/)
 
 ## ⭐ Show your support
 
@@ -138,3 +138,4 @@ Give a ⭐️ if this project helped you!
 ---
 
 **DevSpace** - _Connecting Developers, One Chat at a Time_ 🚀
+
